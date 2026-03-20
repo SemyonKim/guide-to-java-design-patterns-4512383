@@ -4,13 +4,15 @@ public class ItemRegistry {
 
     public static void main(String[] args) {
 
-        var item1 = new StoreItem(
-                "Pretzel", 2.0, "A tasty snack", null, 7, null);
+        var item1 = new StoreItem.Builder("Broccoli", 45.)
+        .shortDescription("vegie")
+        .longDescription("good for health")
+        .build();
 
-        var item2 = new StoreItem(
-                "Soup", 1.5, null,
-                "A meal that you can warm up at home. It can come in different flavours including tomato, chicken, and vegetable",
-                null, "Can");
+        var item2 = new StoreItem.Builder("Cucumber", 25.)
+        .longDescription("mostly water")
+        .packagingType("open box")
+        .build();
 
         addToItemRegistry(item1);
         addToItemRegistry(item2);
