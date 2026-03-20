@@ -8,6 +8,9 @@ public class Main {
 
         var cat = new Cat();
         cat.meow();
+
+        System.out.println("dog.logger == cat.logger : " 
+        + (dog.getLogger()==cat.getLogger()));
     }
 
 }
